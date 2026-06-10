@@ -4,9 +4,6 @@ import {
   Download, ArrowRight, ShieldCheck, Sparkles, Cpu, Code, MessageSquare, Zap, Layers
 } from 'lucide-react';
 import Header from './components/Header';
-import Features from './components/Features';
-import PrivacyCustomization from './components/PrivacyCustomization';
-import CreatorCard from './components/CreatorCard';
 import DownloadModal from './components/DownloadModal';
 import Footer from './components/Footer';
 
@@ -148,14 +145,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* FEATURES GRID & TELEMETRY BENCHMARK COMPARISON */}
-        <Features />
-
-        {/* DATA CONFIDENTIALITY & PERSONALIZATION PROTOCOL */}
-        <PrivacyCustomization />
-
-        {/* CORE ENG TEAM & @FUCKREVERSE CARD SHOWCASE */}
-        <CreatorCard />
+        {/* REMOVED SECTIONS */}
 
       </main>
 
