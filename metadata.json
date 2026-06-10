@@ -1,0 +1,6 @@
+{
+  "name": "34cord",
+  "description": "34cord is a highly optimized, fully customizable, and elegant custom Discord client engineered for optimal performance, built by 34 (@fuckreverse).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
