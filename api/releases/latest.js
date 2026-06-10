@@ -25,8 +25,8 @@ export default function handler(req, res) {
         body: "Première release publique de 34cord.",
         assets: [
             {
-                name: "34cord-dist.zip",
-                browser_download_url: "https://34cord.vercel.app/34cord-dist.zip"
+                name: "34cord-Installer.exe",
+                browser_download_url: "https://34cord.vercel.app/downloads/34cord-Installer.exe"
             }
         ]
     };

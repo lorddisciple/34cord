@@ -131,14 +131,7 @@ export default function App() {
                   </motion.div>
                 </div>
 
-                <a
-                  href="#features"
-                  onClick={scrollToFeatures}
-                  className="w-full sm:w-auto px-10 py-4.5 border border-white/20 hover:border-white rounded-full text-xs font-bold uppercase tracking-widest bg-transparent text-white transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer self-start sm:self-center"
-                >
-                  Explore Features
-                  <ArrowRight className="w-3.5 h-3.5 text-white/60" />
-                </a>
+                {/* Explore Features removed */}
               </div>
             </motion.div>
 

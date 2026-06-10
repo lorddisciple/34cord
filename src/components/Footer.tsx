@@ -32,11 +32,6 @@ export default function Footer() {
               Disclaimer: 34cord is a third-party custom client extension created for custom styling, performance improvements, and local diagnostics. This tool is not affiliated with, authorized, maintained, sponsored or endorsed by Discord Inc. or any of its affiliates. Use in accordance with safety policies and personal discretion.
             </p>
           </div>
-          <div className="shrink-0 flex items-center gap-3">
-            <span className="font-mono text-[9px] bg-white/5 border border-white/10 px-2.5 py-0.5 rounded text-white/50">
-              BUILD: V1.4.2_STABLE
-            </span>
-          </div>
         </div>
 
       </div>

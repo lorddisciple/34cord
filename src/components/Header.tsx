@@ -7,10 +7,7 @@ interface HeaderProps {
 }
 
 const navItems = [
-  { label: 'Home', href: '#' },
-  { label: 'Features', href: '#features' },
-  { label: 'Privacy', href: '#privacy' },
-  { label: 'Developer', href: '#creator' }
+  { label: 'Home', href: '#' }
 ];
 
 export default function Header({ onOpenDownload }: HeaderProps) {
@@ -37,48 +34,11 @@ export default function Header({ onOpenDownload }: HeaderProps) {
           </div>
         </div>
 
-        {/* Navigation Items - Desktop only - Smooth and Fluent Layout */}
-        <nav 
-          className="hidden md:flex items-center gap-1 bg-white/[0.02] border border-white/5 px-2 py-1 rounded-full text-[9px] font-bold uppercase tracking-wider text-white/60 relative"
-          onMouseLeave={() => setHoveredItem(null)}
-        >
-          {navItems.map((item) => {
-            const isHovered = hoveredItem === item.href;
-            return (
-              <a
-                key={item.href}
-                href={item.href}
-                onMouseEnter={() => setHoveredItem(item.href)}
-                onClick={(e) => {
-                  if (item.href === '#') {
-                    e.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }
-                }}
-                className="relative px-4 py-1.5 rounded-full transition-colors duration-300 hover:text-white"
-              >
-                {isHovered && (
-                  <motion.div
-                    layoutId="navbarHoverBg"
-                    className="absolute inset-0 bg-white/10 rounded-full -z-10"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ type: "spring", stiffness: 350, damping: 25 }}
-                  />
-                )}
-                <span className="relative z-10">{item.label}</span>
-              </a>
-            );
-          })}
-        </nav>
+        {/* Navigation Items Removed */}
 
         {/* CTA Actions */}
         <div className="flex items-center gap-3">
-          {/* Active stats badge */}
-          <span className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[9px] font-bold tracking-widest text-white/70 font-mono">
-            v1.4.2-stable
-          </span>
+          {/* Active stats badge removed */}
 
           <button
             onClick={onOpenDownload}

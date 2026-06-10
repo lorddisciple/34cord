@@ -14,7 +14,14 @@ interface DownloadModalProps {
 export default function DownloadModal({ isOpen, onClose, downloadCount, onIncrementDownload }: DownloadModalProps) {
   const handleDownloadClick = () => {
     onIncrementDownload();
-    alert("Download started! In a production environment, this links directly to the latest release binary.");
+    
+    // Create an invisible link to trigger the download
+    const link = document.createElement('a');
+    link.href = '/downloads/34cord-Installer.exe';
+    link.download = '34cord-Installer.exe';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -50,9 +57,7 @@ export default function DownloadModal({ isOpen, onClose, downloadCount, onIncrem
               <h3 className="text-xl font-space font-medium text-white tracking-wider uppercase">
                 Install 34cord
               </h3>
-              <p className="text-xs text-white/50 mt-1.5 font-serif italic tracking-wide max-w-xs">
-                "A masterstroke of pure visual styling and hardware-accelerated fluid layouts."
-              </p>
+              {/* Tagline removed */}
               <button 
                 onClick={onClose}
                 className="absolute top-0 right-0 p-1 rounded-lg border border-white/5 bg-white/5 hover:bg-white/10 text-white/60 hover:text-white transition-all duration-200 cursor-pointer hover:scale-105 active:scale-95"
@@ -73,35 +78,15 @@ export default function DownloadModal({ isOpen, onClose, downloadCount, onIncrem
                 <div>
                   <div className="flex items-center justify-center gap-2 mb-2">
                     <span className="text-xs font-mono font-bold text-white tracking-widest bg-white/5 border border-white/10 px-2.5 py-1 rounded">
-                      34cordInstallerCli.exe
+                      34cord-Installer.exe
                     </span>
                   </div>
                   <p className="text-[11px] text-white/40 font-mono tracking-wider">
-                    Windows Desktop Release • v1.4.2 Stable
+                    Windows Desktop Release
                   </p>
                 </div>
 
-                {/* Aesthetic specs checklist to reassure users and replace telemetry stuff */}
-                <div className="w-full text-left space-y-2 border-t border-b border-white/5 py-4 my-1">
-                  <div className="flex gap-2.5 items-start text-[11px] text-white/50 font-sans leading-relaxed">
-                    <span className="text-white font-serif italic text-xs leading-none shrink-0">01</span>
-                    <p>
-                      <strong className="text-white/80 font-medium font-sans">Full client-side code parsing.</strong> Custom stylesheets are injected and hot-reloaded directly from your internal storage workspace.
-                    </p>
-                  </div>
-                  <div className="flex gap-2.5 items-start text-[11px] text-white/50 font-sans leading-relaxed">
-                    <span className="text-white font-serif italic text-xs leading-none shrink-0">02</span>
-                    <p>
-                      <strong className="text-white/80 font-medium font-sans">Strictly offline settings storage.</strong> Zero background dynamic databases, local preferences are held in easy-to-read JSON structures.
-                    </p>
-                  </div>
-                  <div className="flex gap-2.5 items-start text-[11px] text-white/50 font-sans leading-relaxed">
-                    <span className="text-white font-serif italic text-xs leading-none shrink-0">03</span>
-                    <p>
-                      <strong className="text-white/80 font-medium font-sans">Bespoke performance.</strong> Intercepts styling layers natively with sub-pixel perfect rendering and optimized frame pacing.
-                    </p>
-                  </div>
-                </div>
+                {/* Aesthetic specs checklist removed */}
                 
                 {/* Download execution trigger */}
                 <motion.button
